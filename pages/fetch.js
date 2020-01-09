@@ -20,16 +20,29 @@ const Fetch = ({ posts }) => {
           color: blue;
           cursor: pointer;
         }
+
+        span {
+          padding: 10px;
+          width: 200px;
+          height: 100px;
+          background-color: blue;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: white;
+        }
       `}</style>
       <h3 onClick={() => window.history.back()}>Back</h3>
       Posts:
       {data &&
         data.map(u => (
-          <div>
+          <span>
             <p>
               {u.id} / {u.userId} / {u.title}
             </p>
-          </div>
+          </span>
         ))}
     </div>
   )
